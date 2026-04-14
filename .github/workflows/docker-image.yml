@@ -140,7 +140,7 @@ jobs:
             exit-code: '0'
             ignore-unfixed: true
             vuln-type: os,library
-            severity: CRITICAL,HIG
+            severity: CRITICAL,HIGH
 
   update_cd_repo:
       runs-on: ubuntu-latest
