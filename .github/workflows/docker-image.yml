@@ -151,7 +151,7 @@ jobs:
           with:
             repository: bapaksukareview/3-Tier-GitOps-CD
             ref: main
-            token: $ {{ secrets.CD_REPO_TOKEN }}
+            token: ${{ secrets.CD_REPO_TOKEN }}
             path: cd
 
         - name: Bump images in manifests
