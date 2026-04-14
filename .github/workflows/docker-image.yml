@@ -22,7 +22,7 @@ jobs:
       - name: Set up Node.js (LTS recommended)
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # use 23 if you truly need it
+          node-version: '23' # use 23 if you truly need it
 
       - name: Frontend Compilation (Syntax Check)
         run:
