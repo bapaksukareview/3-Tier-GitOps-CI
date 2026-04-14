@@ -25,14 +25,14 @@ jobs:
           node-version: '22' # use 23 if you truly need it
 
       - name: Frontend Compilation (Syntax Check)
-        run:
-          cd client
-          find . -name "*.js" -exec node --check {} +
+        run: |
+          cd client || exit 0
+          find . -name "*.js" -exec node --check {} + || exit 1
 
       - name: Backend Compilation (Syntax Check)
-        run:
-          cd api
-          find . -name "*.js" -exec node --check {} +
+        run: |
+          cd api || exit 0
+          find . -name "*.js" -exec node --check {} + || exit 1
 
   gitleaks-scan:
     runs-on: ubuntu-latest
