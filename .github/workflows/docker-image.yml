@@ -153,6 +153,7 @@ jobs:
             ref: main
             token: ${{ secrets.CD_REPO_TOKEN }}
             path: cd
+            persist-credentials: true
 
         - name: Bump images in manifests
           working-directory: cd
